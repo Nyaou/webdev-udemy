@@ -19,4 +19,4 @@ aqui estão os links atualizados com os projetos já feitos no curso webdeb da u
 ## Game Mata Mosquito
   [Demo](https://nyaou.github.io/webdev-udemy/javascript/gameMataMosquito)
 ## App de Despesas
-  [Demo]{https://nyaou.github.io/webdev-udemy/es6/appDespesas}
+  [Demo](https://nyaou.github.io/webdev-udemy/es6/appDespesas)
