@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Repetição - Atividade</title>
+</head>
+<body>
+    <script>
+        // atividade 01
+        var lista_frutas = Array('Banana','Maçã','Uva','Morango')
+
+        for(var x = 0; x < lista_frutas.length; x++){
+            document.write(lista_frutas[x] + '<br/>')
+        }
+        
+        document.write('<hr>')
+
+        // atividade 02
+
+        var y = 1
+        var z = 1
+        while(y <= 10 ){
+            z = 1
+            while(z <= 10){
+                document.write(y + ' x ' + z + ' = ' + (y*z) + '<br>')
+                z++
+            }
+            document.write('<hr>')
+            y++
+        }
+    </script>
+</body>
+</html>

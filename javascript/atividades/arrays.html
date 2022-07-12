@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - Array</title>
+</head>
+<body>
+    <input type="text" name="objeto" id="campo_texto">
+    <button onclick="adicionar()" >Adicionar</button>
+    <button onclick="ordernar()" >Ordenar</button>
+
+    <script>
+        var objetos = Array('Cadeira','Impressora','Garfo')
+
+        function adicionar(){
+            var objeto_verificar = document.getElementById('campo_texto').value
+
+            if(objeto_verificar === ''){
+                alert('Informe um valor válido')
+            }else if(objetos.indexOf(objeto_verificar) != -1){
+                alert('Objeto já foi adicionado')
+            }else{
+                objetos.push(objeto_verificar)
+                console.log(objetos)
+                document.getElementById('campo_texto').value = ''
+            }
+
+        }
+
+        function ordernar(){
+            objetos.sort()
+            console.log(objetos)
+        }
+    </script>
+</body>
+</html>
