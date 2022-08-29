@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+		<!--<script src="jquery-3.6.0.min.js"></script>-->
+		<script>
+			$(document).ready(() => {
+				//before, after, prepend, append, html, remove
+				$('#lista1').prepend('<li>Item 4</li>')
+				$('#lista2').append('<div>Item 4</div>')
+			})
+		</script>
+	</head>
+	<body>
+		<ul id="lista1">
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+
+		<ul id="lista2">
+			<div>Item 1</div>
+			<div>Item 2</div>
+			<div>Item 3</div>
+		</ul>
+
+		<hr>
+	</body>
+	
+
+
+</html>
