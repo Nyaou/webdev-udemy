@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+		<script type="text/babel">
+		//Um software de marcenaria
+		//Cadeira e Sofa
+
+		//Paradgima procedural
+
+		/*
+		//cadeira
+		let qtd_pernas = 4
+		let giratoria = false
+		let cor = 'azul'
+
+		//array de cadeiras
+		let cadeiras = Array()
+		cadeiras[0] = Array()
+		cadeiras[0]['qtd_pernas'] = 4
+		cadeiras[0]['giratoria'] = false
+		cadeiras[0]['cor'] = 'azul'
+
+		cadeiras[1] = Array()
+		cadeiras[1]['qtd_pernas'] = 1
+		cadeiras[1]['giratoria'] = true
+		cadeiras[1]['cor'] = 'vermelha'
+
+		function girar_cadeira(indice){
+			if(cadeiras[indice]['giratoria'] === true){
+				console.log('Girou')
+			}else{
+				console.log('Cadeira não é giratória')
+			}
+		}
+
+		function adicionar_cadeira(qtd_pernas, giratoria, cor){
+			let cadeira = Array()
+
+			cadeira['qtd_pernas'] = qtd_pernas
+			cadeira['giratoria'] = giratoria
+			cadeira['cor'] = cor
+
+			cadeiras.push(cadeira)
+		}
+		adicionar_cadeira(3, false, 'verde')
+		console.log(cadeiras)
+		*/
+		//paradigma de OO
+
+		class Cadeira{
+			constructor(qtd_pernas, giratoria, cor){
+				this.qtd_pernas = qtd_pernas
+				this.giratoria = giratoria
+				this.cor = cor
+
+			}
+
+			girarCadeira(){
+				if(this.giratoria === true){
+					console.log('Girou')
+				}else{
+					console.log('Não é uma cadeira giratória')
+				}
+			}
+		}
+
+		let cadeira = new Cadeira(4, false, 'azul')
+		cadeira.girarCadeira()
+		let cadeira2 = new Cadeira(1, true, 'vermelha')
+		cadeira2.girarCadeira()
+
+		let cadeiras = Array()
+		cadeiras.push(new Cadeira(4, false, 'azul'))
+		cadeiras.push(new Cadeira(1, true, 'vermelha'))
+		console.log(cadeiras)
+
+
+		class Sofa{
+			constructor(qtd_lugares,cor,reclinavel){
+				this.qtdLugares = qtd_lugares
+				this.cor = cor
+				this.reclinavel = reclinavel
+			}
+			isReclinavel(){
+				if(this.reclinavel === true){
+					console.log('Este sofá é reclinavel')
+				}else{
+					console.log('Este sofá não é reclinavel')
+				}
+			}
+		}
+
+		let sofas = Array()
+
+		sofas.push(new Sofa(4,'laranja',true))
+		sofas.push(new Sofa(2,'preto',false))
+
+		sofas[0].isReclinavel()
+		sofas[1].isReclinavel()
+		</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+</html>
