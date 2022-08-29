@@ -1,0 +1,76 @@
+$query = '
+	create table if not exists tb_usuarios(
+		id int not null primary key auto_increment,
+		nome varchar(50) not null,
+		email varchar(100) not null,
+		senha varchar(32) not null
+	)
+';
+
+$retorno = $conexao->exec($query);
+//0
+echo $retorno;
+
+
+$query = '
+	insert into tb_usuarios(
+		nome, email, senha
+	) values (
+		"Jorge Sant Ana", "jorge@teste.com.br", "123456"
+
+	)
+
+';
+
+$query = '
+	insert into tb_usuarios(
+		nome, email, senha
+	) values (
+		"Jorge Sant Ana", "jorge@teste.com.br", "123456"
+
+	)
+
+';
+
+$conexao->exec($query);
+
+$query = '
+	insert into tb_usuarios(
+		nome, email, senha
+	) values (
+		"Jamilton Damasceno", "jamilton@teste.com.br", "456789"
+
+	)
+
+';
+
+$conexao->exec($query);
+
+$query = '
+	insert into tb_usuarios(
+		nome, email, senha
+	) values (
+		"Maria Silva", "maria@teste.com.br", "456123"
+
+	)
+
+';
+
+$conexao->exec($query);
+
+------------------------------------------------------
+
+
+$query = '
+	select * from tb_usuarios
+';
+
+$stmt = $conexao->query($query);
+
+$lista = $stmt->fetchAll();
+//$stmt->fetchAll(PDO::FETCH_NUM) ou fetchAll(PDO::FETCH_ASSOC) ou fetch_All(PDO::FETCH_OBJ)
+
+foreach ($lista as $key => $value) {
+	print_r($value);
+	echo '<hr>';
+}
